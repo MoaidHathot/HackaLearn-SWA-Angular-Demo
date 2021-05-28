@@ -1,0 +1,29 @@
+{
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get"
+      ],
+      "route": "getProjectsbyCategory/{category}"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "name": "projects",
+      "type": "cosmosDB",
+      "direction": "in",
+      "databaseName": "HackaLearn",
+      "collectionName": "Projects",
+      "sqlQuery": "SELECT * from c where c.category = {category}",
+      "connectionStringSetting": "CosmosConnectionString"
+  }
+  ],
+  "scriptFile": "../dist/getProjectsByCategory/index.js"
+}

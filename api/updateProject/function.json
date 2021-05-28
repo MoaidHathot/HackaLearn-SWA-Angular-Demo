@@ -1,0 +1,38 @@
+{
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "post"
+      ],
+      "route": "updateProject/{name}"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "name": "existingProject",
+      "type": "cosmosDB",
+      "databaseName": "HackaLearn",
+      "collectionName": "Projects",
+      "id" : "{name}",
+      "partitionKey": "{name}",
+      "connectionStringSetting": "CosmosConnectionString",
+      "direction": "in"
+  },
+  {
+    "type": "cosmosDB",
+    "name": "projectSaver",
+    "databaseName": "HackaLearn",
+    "collectionName": "Projects",
+    "connectionStringSetting": "CosmosConnectionString",
+    "direction": "out"
+  }
+  ],
+  "scriptFile": "../dist/updateProject/index.js"
+}

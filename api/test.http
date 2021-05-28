@@ -1,0 +1,26 @@
+GET http://localhost:7071/api/getAllProjects
+
+###
+POST http://localhost:7071/api/AddProject
+Content-Type: application/json
+
+{
+    "name": "CandyEater",
+    "category": "Angular",
+    "devs": ["Moaid", "Haneen"]
+}
+
+###
+POST http://localhost:7071/api/updateProject/CandyEater
+Content-Type: application/json
+
+{
+    "category": "Angular",
+    "devs": ["Moaid", "haneeni"]
+}
+
+###
+GET http://localhost:7071/api/getProjectsbyCategory/Angular
+
+###
+POST http://localhost:7071/api/deleteProject/CandyEaterfff
