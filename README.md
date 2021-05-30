@@ -19,7 +19,7 @@
 - [Generate a basic Static Web App with an Angular template](https://docs.microsoft.com/en-us/azure/static-web-apps/getting-started?tabs=angular)
 - Clone your newly generated repository	
 - npm install
-- Test the template with "ng serve"
+- Test the template with `ng serve`
 
 
 ## Initial Deployment
@@ -29,6 +29,12 @@
 
 ## Add an API
 - [Add functions](https://docs.microsoft.com/en-us/azure/static-web-apps/add-api?tabs=vanilla-javascript)
+
+## Test SWA & API locally
+- Run `ng serve`
+- Run `swa start http://localhost:4200 --api ./api`
+	- [Documentation 1](https://github.com/Azure/static-web-apps-cli)
+	- [Documentation 2](https://docs.microsoft.com/en-us/azure/static-web-apps/local-development)
 
 ## Create Azure Resources
 - [Create a Serverless CosmosDb Resource](https://docs.microsoft.com/en-us/azure/cosmos-db/create-cosmosdb-resources-portal)
