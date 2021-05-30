@@ -4,9 +4,10 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
     <div>
-      <a href="/.auth/login/github">Login</a>
-      <br><a href="/.auth/logout">Logout</a>
-      <br>
+    <div>
+      <a href="/.auth/login/github">Login via GitHub</a> | <a href="/.auth/login/twitter">Login via Twitter</a> | <a href="/.auth/logout">Logout</a>
+    </div>
+      <hr>
         <div>
           <span>name</span> <input type="text" [(ngModel)]="name" />
           <span>category</span> <input type="text" [(ngModel)]="category" /> 
