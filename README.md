@@ -1,5 +1,22 @@
-# Angular basic
+[[_TOC_]]
 
-[Azure Static Web Apps](https://docs.microsoft.com/azure/static-web-apps/overview) allows you to easily build [Angular](https://angular.io/) apps in minutes. Use this repo with the [Angular quickstart](https://docs.microsoft.com/azure/static-web-apps/getting-started?tabs=angular) to build and customize a new static site.
+## Prerequisites
+- #### Visual Studio Code
+	- [Download](https://code.visualstudio.com/)
+	- [SWA Extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurestaticwebapps)
+	- [Azure Functions Extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions)
+	- [REST Client Extension](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli).
+- #### Azure Functions CLI
+	- [Download](https://www.npmjs.com/package/azure-functions-core-tools)
+
+- #### Azure Static Webaps CLI (preview)
+	- [Docs + Download](https://github.com/Azure/static-web-apps-cli)
+
+
+
+## Code
+- [Generate a basic Static Web App with an Angular template](https://docs.microsoft.com/en-us/azure/static-web-apps/getting-started?tabs=angular)
+- Clone your newly generated repository	
+- npm install
+- Test the template with "ng serve"
