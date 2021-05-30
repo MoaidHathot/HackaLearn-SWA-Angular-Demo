@@ -1,12 +1,6 @@
-import { AzureFunction, Context, HttpRequest } from "@azure/functions"
-import * as cosmos from "@azure/cosmos"
-
-const endpoint = process.env.CosmosDbEndpoint;
-const key = process.env.CosmosDbKey;
-const { CosmosClient } = cosmos;
-
-const client = new CosmosClient({ endpoint, key})
-const container = client.database("HackaLearn").container("Projects");
+import { AzureFunction, Context, HttpRequest } from "@azure/functions";
+import * as cosmos from "@azure/cosmos";
+import { projects } from "../repository";
 
 const httpTrigger: AzureFunction = async function (context: Context, req: HttpRequest): Promise<void> {
         
@@ -19,28 +13,15 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
         return;
     }
 
-    const entry = container.item(req.params.name, req.params.name);
-    if((await entry.read()).statusCode == 404){
-        context.res = {
-            status: 404
-        };
-        return;
+    let status = 200;
+    if(!projects.delete(req.params.name)){
+        //Not found
+        status = 404;
     }
 
-    await entry.delete();
-// const client = new CosmosClient({ endpoint, key });
-// All function invocations also reference the same database and container.
-// const container = client.database("MyDatabaseName").container("MyContainerName");
-
-// module.exports = async function (context) {
-//     const { resources: itemArray } = await container.items.readAll().fetchAll();
-//     context.log(itemArray);
-// }
     context.res = {
-        // status: 200, /* Defaults to 200 */
-      
+        status: status,      
     };
-
 };
 
 export default httpTrigger;

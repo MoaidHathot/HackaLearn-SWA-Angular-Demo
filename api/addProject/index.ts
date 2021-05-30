@@ -1,4 +1,5 @@
 import { AzureFunction, Context, HttpRequest } from "@azure/functions"
+import { Project } from "../model"
 
 const httpTrigger: AzureFunction = async function (context: Context, req: HttpRequest): Promise<void> {
 
@@ -24,12 +25,7 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
         return;
     }
 
-    var entry = {
-        "id": req.body.name,
-        "name": req.body.name,
-        "category": req.body.category,
-        "devs": req.body.devs,
-    }
+    const entry = new Project(req.body.name, req.body.name, req.body.category, req.body.devs);
 
     context.log(`Adding new entry`);
 
@@ -37,7 +33,7 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
 
     context.res = {
         // status: 200, /* Defaults to 200 */
-        body: context.bindings.projectSaver,
+        body: entry,
     };
 };
 
