@@ -23,7 +23,7 @@
       "collectionName": "Projects",
       "sqlQuery": "SELECT * from c where c.category = {category}",
       "connectionStringSetting": "CosmosConnectionString"
-  }
+    }
   ],
   "scriptFile": "../dist/getProjectsByCategory/index.js"
 }
