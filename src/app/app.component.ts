@@ -5,7 +5,11 @@ import { Component } from '@angular/core';
   template: `
     <div>
     <div>
-      <a href="/.auth/login/github">Login via GitHub</a> | <a href="/.auth/login/twitter">Login via Twitter</a> | <a href="/.auth/logout">Logout</a>
+      <a href="/.auth/login/github">Login via GitHub</a> | 
+      <a href="/.auth/login/twitter">Login via Twitter</a> | 
+      <a href="/.auth/login/facebook">Login via Facebook</a> | 
+      <a href="/.auth/login/google">Login via Google</a> | 
+      <a href="/.auth/logout">Logout</a> |
     </div>
       <hr>
         <div>

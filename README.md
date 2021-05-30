@@ -23,9 +23,24 @@
 
 
 ## Deploy
+- Commit & Push your code
 - [Use the Azure Extenion to create a new Static Web App](https://docs.microsoft.com/en-us/azure/static-web-apps/getting-started?tabs=angular)
 
 
 ## Add an API
 - [Add functions](https://docs.microsoft.com/en-us/azure/static-web-apps/add-api?tabs=vanilla-javascript)
 
+## Create Azure Resources
+- [Create a Serverless CosmosDb Resource](https://docs.microsoft.com/en-us/azure/cosmos-db/create-cosmosdb-resources-portal)
+- [Create & Connect Application Insights Resource](https://dev.to/azure/getting-logs-from-static-web-apps-apis-m5l)
+
+
+## Use CosmosDB in Azure Functions
+- [Input Bindings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-cosmosdb-v2-input?tabs=javascript)
+- [Output Bindings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-cosmosdb-v2-output?tabs=javascript)
+- [Install Cosmos DB Client Library](https://docs.microsoft.com/en-us/javascript/api/overview/azure/cosmos-readme?view=azure-node-latest)
+
+
+## Configure Authentication
+- [Create `staticwebapp.config.json` file in the `src/` directory](https://docs.microsoft.com/en-us/azure/static-web-apps/configuration#routes)
+- [Configure the routes](https://github.com/MoaidHathot/HackaLearn-SWA-Angular-Demo/blob/main/src/staticwebapp.config.json)
